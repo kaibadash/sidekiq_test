@@ -4,7 +4,7 @@ class HardJob
 
   def perform(count)
     count.times do |c|
-      Rails.logger.info("HardJob sleep(#{c}/#{count})  pid: #{ Process.pid }, thread id: #{ Thread.current.object_id }")
+      Rails.logger.info("HardJob sleep(#{c}/#{count}) pid: #{ Process.pid }, thread id: #{ Thread.current.object_id }")
       sleep(1)
     end
   end
